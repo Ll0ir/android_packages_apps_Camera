@@ -1936,7 +1936,7 @@ public class Camera extends ActivityBase implements FocusManager.Listener,
                 return true;
 
             case KeyEvent.KEYCODE_VOLUME_UP:
-                if (event.getRepeatCount() == 0 && mParameters.isZoomSupported()
+                if (mParameters.isZoomSupported()
                         && mZoomControl != null && mZoomControl.isEnabled()) {
                     int index = mZoomValue + 1;
                     if (index <= mZoomMax) {
@@ -1946,7 +1946,7 @@ public class Camera extends ActivityBase implements FocusManager.Listener,
                 }
                 return true;
             case KeyEvent.KEYCODE_VOLUME_DOWN:
-                if (event.getRepeatCount() == 0 && mParameters.isZoomSupported()
+                if (mParameters.isZoomSupported()
                         && mZoomControl != null && mZoomControl.isEnabled()) {
                     int index = mZoomValue - 1;
                     if (index >= 0) {
